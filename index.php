@@ -87,7 +87,7 @@ if (!empty($tables[$tbl])) {
 	$edit_allowed = $global_permissions['edit'] ? '*' : '';
 	$edit_multi = $global_permissions['edit_multi'];
 	$edit_all = $global_permissions['edit'];
-	$edit_locked = '';
+	$edit_locked = [];
 	$cols_allowed = '*';
 }
 
@@ -102,7 +102,7 @@ $mysqli = new mysqli($db['host'],$db['user'],$db['pw'],$db['db']);
 
 $sql = "SELECT $cols_allowed FROM $tbl";
 
-if ($global_permissions['custom_export'] && $cond_val && $cond_col) {
+if ($global_permissions['custom_export'] && !empty($cond_val) && !empty($cond_col)) {
 	$sql .= " WHERE $cond_col='$cond_val'";
 }
 
@@ -311,7 +311,7 @@ if ($action=='download') {
 				) {
 					printf ('<td><input type="text" value="%s"><a href="#" class="ir button edit" data-field="'.$field_name.'" data-action="edit">edit</a></td>', $row[$i]);
 				} else {
-					printf ('<td>%s</td>', $row[$i]);
+					printf ('<td>%s</td>', htmlentities($row[$i]));
 				}
 			}
 			echo ('</tr>');
