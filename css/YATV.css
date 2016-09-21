@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+body {
+	padding: 10px 20px;
+}
+
+body, table {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#555;
+}
+
+h1 {
+	color:#555;
+	font-size:18px;
+}
+
+a {
+	text-decoration:none;
+	color:#ff6600;
+	outline:none;
+}
+
+img {
+	border:none;
+}
+
+header {
+	margin:10px 0;
+	padding:5px;
+	background-color:#555;
+	color:#eee;
+}
+
+header span {
+	display: inline-block;
+    margin: 5px 25px;
+}
+
+header .count {
+	margin: 0;
+}
+
+header a:hover {
+	text-decoration:underline;
+}
+
+header input[type="text"] {
+	width: auto;
+}
+
+.pagination {
+	list-style:none;
+	display: inline-block;
+	margin: 0 20px;
+    padding: 0;
+}
+
+.pagination li {
+	display: inline-block;
+}
+
+.pagination a {
+	display: block;
+    padding: 5px;
+}
+
+.pagination .active a {
+	color: inherit;
+}
+
+.download {
+	background: url("../img/database_go.png") no-repeat scroll 0 0 transparent;
+	padding: 2px 0 2px 20px;
+}
+
+
+table {
+	width:100%;
+}
+
+table a.active {
+	color:#fff;
+}
+
+tr:nth-child(2n) {
+	background-color:#eaeaea;
+}
+
+td, th {
+	padding:5px;
+	text-align: left;
+}
+
+tr.titles {
+	font-weight:bold;
+	background-color:#555;
+	color:#eee;
+	white-space:nowrap;
+}
+
+select {
+	margin: 0 5px;
+	padding: 2px;
+}
+
+input[type="text"] {
+	vertical-align: top;
+	width: 30px;
+	border: 1px solid #ddd;
+	padding: 2px;
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+.button {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+
+.button.delete {
+	background: url("../img/database_delete.png") no-repeat scroll 0 0 transparent;
+}
+
+.button.edit {
+	background: url("../img/database_save.png") no-repeat scroll 0 0 transparent;
+	margin-left: 5px;
+}
+
+.error {
+	background-color: #EA7552;
+}
+
+.success {
+	background-color: #B0DD5A;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

@@ -1,0 +1,3 @@
+<Files var.YATV.php>
+    Deny from all
+</Files>
